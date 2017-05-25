@@ -1,6 +1,9 @@
 {
   "name": "shopapp",
   "version": "1.0.0",
+  "engines": {
+    "node": "7.7.3"
+  },
   "description": "",
   "main": "server.js",
   "dependencies": {
