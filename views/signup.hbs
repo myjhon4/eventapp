@@ -1,0 +1,47 @@
+	<!-- /pages_agile_info_w3l -->
+
+						<div class="pages_agile_info_w3l">
+
+							    {{#if messages}}
+								    <div style="margin-top:30px" class="alert alert-{{#if status}}success{{else}}danger{{/if}} fade in col-md-offset-4 col-md-4">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<i class="fa fa-times-circle fa-fw fa-lg"></i>
+									<strong>{{messages}}</strong>  <a href="#" class="alert-link">try submitting again</a>.
+									</div>
+									{{/if}}
+						
+							<!-- /login -->
+							   <div class="over_lay_agile_pages_w3ls two">
+								<div class="registration">
+								
+												<div class="signin-form profile">
+													<h2>Sign up Form </h2>
+													<div class="login-form">
+														<form action="signup" method="post" name="myForm">
+															<input type="text" name="name" ng-model="name"  placeholder="Username" required >
+													
+															<span ng-show="myForm.name.$touched && myForm.myName.$invalid">The name is required.</span>
+																<input type="email" name="email" placeholder="E-mail" >
+
+																<input type="password" name="password" placeholder="Password" >
+																<input type="password" name="cpassword" placeholder="Confirm Password">
+							
+															<div class="tp">
+																<input type="submit" value="SIGN Up">
+															</div>
+														</form>
+													</div>
+													
+													<p><a href="#"> By clicking Sign Up, I agree to your terms</a></p>
+													
+													 <h6><a href="/">Clcik To Login</a><h6>
+												</div>
+										</div>
+										<!--copy rights start here-->
+											<div class="copyrights_agile two">
+												 <p>© 2017 y  <a href="#" target="_blank">demo node js</a> </p>
+											</div>	
+											<!--copy rights end here-->
+						    </div>
+						</div>
+							<!-- /login -->

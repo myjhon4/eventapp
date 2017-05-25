@@ -1,0 +1,97 @@
+{{> nav }}
+		<!-- /inner_content-->
+				<div class="inner_content">
+				    <!-- /inner_content_w3_agile_info-->
+
+
+				
+
+					<div class="inner_content_w3_agile_info">
+						   {{#if messages}}
+								    <div class="alert alert-success fade in col-md-offset-4 col-md-4">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<i class="fa fa-times-circle fa-fw fa-lg"></i>
+									<strong>{{messages}}</strong>  
+									<a href="#" class="alert-link"></a>.
+									</div>
+									{{/if}}
+									<div class="clearfix"></div>
+					<!-- /agile_top_w3_grids-->
+					   <div class="agile_top_w3_grids">
+					          <ul class="ca-menu">
+									<li>
+										<a href="#">
+											
+											<i class="fa fa-building-o" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main">{{product}}</h4>
+												<h3 class="ca-sub">Total Product</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+										  <i class="fa fa-user" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main one">{{users}}</h4>
+												<h3 class="ca-sub one">Total Users</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-database" aria-hidden="true"></i>
+											<div class="ca-content">
+											<h4 class="ca-main two">29,008</h4>
+												<h3 class="ca-sub two">New Projects</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-tasks" aria-hidden="true"></i>
+											<div class="ca-content">
+												<h4 class="ca-main three">49,436</h4>
+												<h3 class="ca-sub three">Old Projects</h3>
+											</div>
+										</a>
+									</li>
+																	<div class="clearfix"></div>
+								</ul>
+					   </div>
+					 <!-- //agile_top_w3_grids-->
+			
+						 
+						
+					
+
+
+				    </div>
+					<!-- //inner_content_w3_agile_info-->
+				</div></div>
+						<div class="clearfix"></div>
+				{{> footer }}
+
+<!-- /circle-->
+   <script type="text/javascript" src="js/circles.js"></script>
+                   <script>
+                var colors = [
+                    ['#ffffff', '#fd9426'], ['#ffffff', '#fc3158'],['#ffffff', '#53d769'], ['#ffffff', '#147efb']
+                  ];
+                for (var i = 1; i <= 7; i++) {
+                  var child = document.getElementById('circles-' + i),
+                    percentage = 30 + (i * 10);
+                    
+                  Circles.create({
+                    id:         child,
+                    percentage: percentage,
+                    radius:     80,
+                    width:      10,
+                    number:     percentage / 1,
+                    text:       '%',
+                    colors:     colors[i - 1]
+                  });
+                }
+            
+        </script>
+  <!-- //circle -->

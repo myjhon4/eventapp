@@ -1,0 +1,89 @@
+{{> nav }}
+<div class="inner_content">
+				    <!-- /inner_content_w3_agile_info-->
+
+					<!-- breadcrumbs -->
+						<div class="w3l_agileits_breadcrumbs">
+							<div class="w3l_agileits_breadcrumbs_inner">
+								<ul>
+									<li><a href="main-page.html">Home</a><span>«</span></li>
+									
+									<li>Product</li>
+								</ul>
+							</div>
+						</div>
+					<!-- //breadcrumbs -->
+
+					<div class="inner_content_w3_agile_info two_in">
+							    {{#if info}}
+								    <div class="alert alert-{{#if status}}success{{else}}danger{{/if}} fade in col-md-offset-4 col-md-4">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<i class="fa fa-times-circle fa-fw fa-lg"></i>
+									<strong>{{info}}</strong>  <a href="#" class="alert-link"></a>.
+									</div>
+									{{/if}}
+									<div class="clearfix"></div>
+					  <h2 class="w3_inner_tittle">Products List 	 </h2>
+									<!-- tables -->
+						
+									<div class="agile-tables">
+										<div class="w3l-table-info agile_info_shadow">
+										 <h3 class="w3_inner_tittle two">Products </h3>
+											<table id="table">
+											<thead>
+											  <tr>
+											    <th>Sno.</th>
+											    <th>Product</th>
+											    <th>Description</th>
+											    <th>Price</th>
+											    <th>Image</th>
+											    <th>Status</th>
+											    <th colspan="2" align="center">Action</th>
+											  </tr>
+											</thead>
+											<tbody>
+                                      {{#json}}
+										  <tr>
+											<td data-th="Name"><span class="bt-content">{{@index}} </span></td>
+											<td data-th="Age"><span class="bt-content">{{name}}</span></td>
+											<td data-th="Gender"><span class="bt-content">{{description}}</span></td>
+											<td data-th="Height"><span class="bt-content">{{price}}</span></td>
+											<td data-th="Province"><span class="bt-content"><img src="uploads/{{image_url}}"  width='100' height="100" />
+
+											</span></td>
+											<td data-th="Sport">
+											{{#if status}}
+											 <span class="label label-success">Active</span>
+
+											{{else}}
+											<span class="label label-danger">Deactive</span>
+											{{/if}}
+											
+                                            
+											</td>
+											<td>
+												<a href="/edit-product-{{product_id}}" class="btn btn-primary btn-flat btn-pri btn-lg"><i class="fa fa-plus" aria-hidden="true"></i> Edit</a>
+												</td><td>
+												<a href="/delete-product-{{product_id}}" class="btn btn-danger btn-flat btn-pri btn-lg"><i class="fa fa-plus" aria-hidden="true"></i> Delete</a>
+											</td>
+										  </tr>
+								      {{/json}}  
+											</tbody>
+										  </table>
+									
+									  
+								</div>
+								
+
+
+
+									
+						</div>
+							<!-- //tables -->
+					
+				
+				    </div>
+					<!-- //inner_content_w3_agile_info-->
+				</div>
+		<!-- //inner_content-->
+		{{> footer }}

@@ -1,0 +1,123 @@
+{{> nav }}
+		
+		<!-- /inner_content-->
+				<div class="inner_content">
+				    <!-- /inner_content_w3_agile_info-->
+
+					<!-- breadcrumbs -->
+						<div class="w3l_agileits_breadcrumbs">
+							<div class="w3l_agileits_breadcrumbs_inner">
+								<ul>
+									<li><a href="main-page.html">Home</a><span>«</span></li>
+									<li>Forms <span>«</span></li>
+									<li>Inputs</li>
+								</ul>
+							</div>
+						</div>
+					<!-- //breadcrumbs -->
+
+					<div class="inner_content_w3_agile_info two_in">
+				
+					   {{#if messages}}
+								    <div class="alert alert-success fade in col-md-offset-4 col-md-4">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<i class="fa fa-times-circle fa-fw fa-lg"></i>
+									<strong>{{messages}}</strong>  <a href="#" class="alert-link"></a>.
+									</div>
+									{{/if}}
+									<div class="clearfix"></div>
+					
+							<!--/forms-->
+													<div class="forms-main_agileits">
+														
+														
+																<!--/forms-inner-->
+													  				<div class="forms-inner">
+																
+																			  <!--/set-2-->
+												                           
+																			<div class="wthree_general graph-form agile_info_shadow ">
+																				 <center><h3 class="w3_inner_tittle two">{{#if json}} Edit {{else}} Add {{/if}}  User  </h3></center>
+
+																					<div class="grid-1 ">
+																							<div class="form-body">
+																									<form class="form-horizontal" method="post" action="{{#if json}} update_user {{else}} save_user {{/if}}" enctype="multipart/form-data">
+																										
+																										<div class="form-group">
+																											<label for="focusedinput" class="col-sm-2 control-label">Name</label>
+																											<div class="col-sm-8">
+																												<input type="text" value="{{#json}}{{name}}{{/json}}" class="form-control1" id="focusedinput" name="name" placeholder="Name">
+																												<input type="hidden" value="{{#json}}{{user_id}}{{/json}}" class="form-control1" id="focusedinput" name="user_id" placeholder="Name">
+																											</div>
+																											<div class="col-sm-2">
+																												
+																											</div>
+																										</div>
+																										<div class="form-group">
+																											<label for="mediuminput" class="col-sm-2 control-label">Email</label>
+																											<div class="col-sm-8">
+																												<input type="text" value="{{#json}}{{email}}{{/json}}" class="form-control1" id="mediuminput" name="email" placeholder="Email">
+																											</div>
+																										</div>
+																									
+																								
+																										<div class="form-group">
+																											<label for="radio" class="col-sm-2 control-label">Status</label>
+																											<div class="col-sm-8">
+																												<div class="radio-inline"><label><input type="radio" value="1"  {{#json}} 	{{#if active}}	checked=""									
+
+																																{{else}}
+																																
+																																{{/if}}
+																														                {{/json}} name="status" > Active</label></div>
+																												<div class="radio-inline"><label><input type="radio" value="0" {{#json}} 	{{#if active}}									
+
+																																{{else}}
+																																checked=""
+																																{{/if}} 	
+																														                {{/json}} name="status" > Deactive</label></div>
+																											
+																											</div>
+																										</div>
+																								                                                    <div class="form-group">
+									                                                                    <label for="mediuminput" class="col-sm-2 control-label">Images Upload</label>
+																											<div class="col-sm-8">
+																												<input type="file" name="image" id="file">
+																												{{#if json}}
+																												<input type="hidden" name="image_url"  value="{{#json}}{{image_url}}{{/json}}"  id="file">
+																												{{else}}  {{/if}}
+																										  		  </div></div>
+																										    <div class="form-group">
+									                                                                   		<div class="col-sm-8">
+																												
+																										 <center><button type="submit" class="btn btn-default">{{#if json}}Update {{else}} Save {{/if}} </button></center>
+																										  </div></div>
+
+																										 
+																										 
+																									</form>
+																							</div>
+
+																					</div>
+																				</div> 
+																			
+																			 <!--//set-2-->
+
+																
+																		</div>
+																	<!--//forms-inner-->
+																</div> 
+														<!--//forms-->											   
+					
+						
+				    </div>
+					<!-- //inner_content_w3_agile_info-->
+				</div>
+		<!-- //inner_content-->
+	</div>
+<!-- banner -->
+
+{{> footer }}
+
+
+
